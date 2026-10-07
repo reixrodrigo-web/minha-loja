@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    color: #111;
+}
+
+header {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.produtos {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.produto {
+    background: white;
+    width: 300px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.produto h2 {
+    margin: 15px 0 8px;
+}
+
+.preco {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+}
