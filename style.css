@@ -197,3 +197,12 @@ header.cabecalho-royss h1 {
 header.cabecalho-royss p {
   color: #cccccc !important;
 }
+
+.cabecalho-royss h1 {
+  font-family: Impact, "Arial Black", sans-serif;
+  font-size: 58px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  transform: scaleX(1.08);
+}
