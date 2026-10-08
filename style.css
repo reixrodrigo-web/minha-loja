@@ -93,5 +93,65 @@ footer {
     text-align: center;
     padding: 25px 15px;
     color: #777;
-    font-size: 13px;
+    font-size: 
+   .apresentacao {
+    text-align: center;
+    padding: 35px 20px 10px;
+}
+
+.apresentacao > p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.apresentacao h2 {
+    font-size: 25px;
+    max-width: 450px;
+    margin: 15px auto;
+}
+
+.fotografias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.fotografias img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.fotografias p {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.produto label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+.produto input,
+.produto select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    background: white;
+    font-size: 16px;
+}
+
+.produto button {
+    letter-spacing: 1px;
+    margin-top: 22px;
+    padding: 15px;
 }
