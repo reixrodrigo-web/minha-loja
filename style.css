@@ -1,57 +1,84 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    background: #f5f5f5;
     color: #111;
 }
-
 header {
     background: #111;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 35px 15px;
 }
-
 header h1 {
     margin: 0;
-    font-size: 30px;
+    font-size: 32px;
+    letter-spacing: 3px;
 }
-
+header p {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-top: 12px;
+}
 .produtos {
-    padding: 20px;
+    padding: 25px 15px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
 }
-
 .produto {
     background: white;
-    width: 300px;
+    width: 100%;
+    max-width: 320px;
     padding: 15px;
     border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     text-align: center;
 }
-
 .produto img {
     width: 100%;
+    height: auto;
+    display: block;
     border-radius: 8px;
 }
-
 .produto h2 {
-    margin: 15px 0 8px;
+    font-size: 19px;
+    margin: 18px 0 8px;
 }
-
-.preco {
-    font-size: 20px;
+.produto p {
+    color: #555;
+    font-size: 14px;
+}
+.produto .preco {
+    color: #111;
+    font-size: 22px;
     font-weight: bold;
+    margin: 18px 0 10px;
 }
-
 button {
     background: #111;
     color: white;
     border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 7px;
     font-size: 16px;
+    font-weight: bold;
     margin-top: 10px;
+    cursor: pointer;
+}
+button:hover {
+    background: #333;
+}
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #777;
+    font-size: 13px;
 }
