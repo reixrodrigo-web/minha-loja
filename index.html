@@ -6,7 +6,6 @@
     <title>MINHA LOJA</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
@@ -21,8 +20,24 @@
         <h2>Camisola personalizada</h2>
         <p>Um estilo único, feito para ti.</p>
         <p class="preco">29,99 €</p>
-        <button onclick="window.location.href='mailto:reixrodrigo@gmail.com?subject=Quero%20comprar%20a%20camisola'">
-            Comprar
+
+        <label for="nome1">O teu nome</label>
+        <input id="nome1" type="text" placeholder="Nome" required>
+
+        <label for="tamanho1">Tamanho</label>
+        <select id="tamanho1">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M" selected>M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
+
+        <label for="quantidade1">Quantidade</label>
+        <input id="quantidade1" type="number" min="1" max="10" value="1">
+
+        <button onclick="encomendar('Camisola personalizada', 'nome1', 'tamanho1', 'quantidade1')">
+            Encomendar
         </button>
     </div>
 
@@ -31,8 +46,24 @@
         <h2>Modelo exclusivo</h2>
         <p>Descobre o teu próximo estilo.</p>
         <p class="preco">29,99 €</p>
-        <button onclick="window.location.href='mailto:reixrodrigo@gmail.com?subject=Quero%20comprar%20o%20segundo%20produto'">
-            Comprar
+
+        <label for="nome2">O teu nome</label>
+        <input id="nome2" type="text" placeholder="Nome" required>
+
+        <label for="tamanho2">Tamanho</label>
+        <select id="tamanho2">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M" selected>M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
+
+        <label for="quantidade2">Quantidade</label>
+        <input id="quantidade2" type="number" min="1" max="10" value="1">
+
+        <button onclick="encomendar('Modelo exclusivo', 'nome2', 'tamanho2', 'quantidade2')">
+            Encomendar
         </button>
     </div>
 
@@ -41,6 +72,41 @@
 <footer>
     <p>Obrigado por visitares a nossa loja!</p>
 </footer>
+
+<script>
+function encomendar(produto, nomeId, tamanhoId, quantidadeId) {
+    const nome = document.getElementById(nomeId).value.trim();
+    const tamanho = document.getElementById(tamanhoId).value;
+    const quantidade = Number(document.getElementById(quantidadeId).value);
+
+    if (!nome) {
+        alert('Escreve o teu nome antes de encomendar.');
+        return;
+    }
+
+    if (!Number.isInteger(quantidade) || quantidade < 1 || quantidade > 10) {
+        alert('Escolhe uma quantidade entre 1 e 10.');
+        return;
+    }
+
+    const preco = 29.99;
+    const total = (preco * quantidade).toFixed(2).replace('.', ',');
+    const assunto = encodeURIComponent('Encomenda: ' + produto);
+    const mensagem = encodeURIComponent(
+        'Olá! Quero fazer esta encomenda.\n\n' +
+        'Nome: ' + nome + '\n' +
+        'Produto: ' + produto + '\n' +
+        'Tamanho: ' + tamanho + '\n' +
+        'Quantidade: ' + quantidade + '\n' +
+        'Preço estimado: ' + total + ' €\n\n' +
+        'Aguardo confirmação da encomenda.'
+    );
+
+    window.location.href =
+        'mailto:reixrodrigo@gmail.com?subject=' + assunto +
+        '&body=' + mensagem;
+}
+</script>
 
 </body>
 </html>
