@@ -179,3 +179,21 @@ footer {
   margin: 10px 0 0;
   color: #ccc;
 }
+
+header.cabecalho-royss {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+header.cabecalho-royss h1 {
+  color: #ffffff !important;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 8px;
+}
+
+header.cabecalho-royss p {
+  color: #cccccc !important;
+}
